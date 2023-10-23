@@ -33,14 +33,18 @@
 	      function updateDateTime() {
 	        const now = new Date();
 	        var currentDateTime = now.getMinutes();
-            if(currentDateTime == 1 || currentDateTime == 0){
-            currentDateTime = "just now";
-            }
-            else{
-            currentDateTime = currentDateTime + " mins ago"            
-            }
-	        document.querySelector('#time-update').textContent = currentDateTime;
-	      }
+		      
+	        if(currentDateTime == 1 || currentDateTime == 0){
+	            currentDateTime = "just now";
+	        }
+	        else{
+	            currentDateTime = currentDateTime + " mins ago"            
+	        }
+		      
+	        const timeUpdate = document.querySelectorAll('#time-update');
+	        timeUpdate[0].textContent = currentDateTime;
+	        timeUpdate[1].textContent = currentDateTime;
+		}
     	</script>
 	  <div class="data">
 		<div class="lowerGymGraphArea">
