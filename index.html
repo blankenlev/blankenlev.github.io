@@ -34,11 +34,11 @@
 	        const now = new Date();
 	        var currentDateTime = now.getMinutes();
 		      
-	        if(currentDateTime < 1){
+	        if(currentDateTime <= 1){
 	            currentDateTime = "just now";
 	        }
 	        else{
-	            currentDateTime = currentDateTime + " mins ago"            
+	            currentDateTime += " mins ago"            
 	        }
 		      
 	        const timeUpdate = document.querySelectorAll('#time-update');
